@@ -12,7 +12,7 @@
   </div>
   <!-- Text Column -->
   <div style="flex: 2 1 60%; min-width: 300px; box-sizing: border-box;">
-    <h3>AI-Cover Album Creation</h3>
+    <h2>AI-Cover Album Creation</h2>
     <ul>
       <li>Based on a recently released album "2024 Lopker Christmas Songs" by John Lopker, licensed under <strong>CC BY</strong>, allowing derivative work.</li>
       <li>The vocals of the original songs have been reimagined using <strong>AI voice modeling</strong>, featuring a custom-trained voice model.</li>
@@ -32,7 +32,23 @@
   </div>
 </div>
 
-**Anomaly Detection in AI cover songs**:
+## RVC Demonstration
+
+To showcase how the RVC (Retraining Voice Conversion) model works, we have provided the following audio examples:
+
+1. **Original Vocal** ([Listen](data/rvc_example/1-original_vocal.wav))  
+   This is the raw vocal track before any processing.
+
+2. **Training Material** ([Listen](data/rvc_example/2-training_material.wav))  
+   A short clip used to train the custom AI voice model.
+
+3. **Generated Vocal** ([Listen](data/rvc_example/3_generated_vocal.wav))  
+   The AI-generated vocal output using the custom voice model.
+
+These examples demonstrate the transformation from the original vocal to the AI-generated output. They provide insight into the capabilities of the model and serve as a practical example of how RVC can be applied in audio production.
+
+
+## Anomaly Detection in AI cover songs
    - Fitting a voice model on a vocal track may cause glitches and anomalies, slowing down post-production.
    - To address this, a **machine learning algorithm** was developed to locate and analyze these glitches effectively, as reflected in the accompanying Jupyter Notebook.
    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mwtuni/glitches-in-christmas/blob/main/glitch_detector.ipynb)
