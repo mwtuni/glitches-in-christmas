@@ -38,6 +38,10 @@ To showcase how the RVC (Retraining Voice Conversion) model works, we have provi
 
 1. **Original Vocal** ([Listen](data/rvc_example/1-original_vocal.wav))  
    This is the raw vocal track before any processing.
+   <audio controls>
+      <source src="data/rvc_example/1-original_vocal.wav" type="audio/wav">
+      Your browser does not support the audio element.
+   </audio>
 
 2. **Training Material** ([Listen](data/rvc_example/2-training_material.wav))  
    A short clip used to train the custom AI voice model.
