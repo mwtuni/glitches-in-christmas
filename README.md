@@ -1,64 +1,99 @@
 # Glitches In Christmas
 
-**Glitches In Christmas** is an academic, creative and technical exploration into the world of AI-generated cover songs and building a machine learning algorithm to analyze sound features on vocal tracks.
+Final project for the Building AI course
 
-## Project Highlights
+## Summary
 
-<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px; margin-top: 20px;">
-  <!-- Image Column -->
-  <div style="flex: 1 1 300px; max-width: 40%; box-sizing: border-box;">
-    <img src="images/live_performance.png" alt="Live Performance" style="width: 60%; height: auto; border-radius: 10px;"><br/>
-    <i>AI Generated (SD1.5): bald fit alpha miwilen gentleman singing expressively opera in live christmas:1.2 gala, wearing christmas tuxedo, intense eye contact, gray beard, rich expressive dramatic performance, christmas tree, snow flakes, confetti, sparkling glitter, masterpiece, vivid intense colors, perfect quality, incredible detail, photorealistic, uhd, 4k</i>
-  </div>
-  <!-- Text Column -->
-  <div style="flex: 2 1 60%; min-width: 300px; box-sizing: border-box;">
-    <h2>AI-Cover Album Creation</h2>
-    <ul>
-      <li>Based on a recently released album "2024 Lopker Christmas Songs" by John Lopker, licensed under <strong>CC BY</strong>, allowing derivative work.</li>
-      <li>The vocals of the original songs have been reimagined using <strong>AI voice modeling</strong>, featuring a custom-trained voice model.</li>
-      <li>AI-cover Christmas song album titled <strong>"24YDL Days Till Christmas"</strong> is available for download below.</li>
-    </ul>
-    <!-- Highly Visible Download Section -->
-    <div style="margin-top: 30px; text-align: center; border: 3px solid red; padding: 20px; border-radius: 12px; background-color: #ffe6e6;">
-      <a href="https://drive.google.com/drive/folders/1-0rqw0uwNj_NsFwUVW3V5c0Ss5aeIsIx?usp=sharing" 
-         style="display: block; font-size: 488px; font-weight: bold; color: #fff; background-color: #ff0000; padding: 40px; text-decoration: none; border-radius: 24px; margin: 40px auto; max-width: 400px;">
-        🚨 Download the AI-Cover Album Here 🚨
-      </a>
-    </div>
-    <br/>
-    <p style="margin-top: 20px;">
-      The Christmas gala was a magical evening filled with joy and festive cheer. The live performance of the album captivated the audience with soulful AI-generated vocals and stunning visuals. The event featured dazzling light displays synchronized with the music. Families and friends gathered to celebrate the season with hot cocoa and sweet treats. Guests left inspired, carrying the holiday spirit home. <i>'Hynn Hynn, Yeah...'</i>
-    </p>
-  </div>
-</div>
+**Glitches In Christmas** is a creative and technical AI project exploring voice modeling and anomaly detection in AI-generated cover songs. It builds a machine learning algorithm to detect audio anomalies (or "glitches") in synthetic vocals — an important step toward identifying deepfake audio based on signal features.
 
-## RVC Demonstration
+---
 
-To showcase how the RVC (Retraining Voice Conversion) model works, we have provided the following audio examples:
+## Background
+
+AI-generated voice is powerful and increasingly accessible, but comes with risks of misuse (e.g., deepfakes) and technical limitations like artifacts or "glitches" in synthesized audio. As AI cover songs grow in popularity, detecting such glitches becomes critical for artists and engineers alike.
+
+This project was inspired by:
+* The rise of open-source AI voice tools (e.g., RVC)
+* Artistic experimentation with AI-generated music
+* A technical need for quality control in audio post-production
+
+---
+
+## How is it used?
+
+This project has three parts:
+1. **AI-cover album creation** using voice conversion of an original, open-licensed Christmas album.
+2. **Demonstration of RVC voice modeling**, showing before-and-after samples of AI-transformed vocals.
+3. **Anomaly detection** via a machine learning model to locate "glitches" in audio tracks, implemented in a Jupyter Notebook.
+
+Users:
+- Artists experimenting with AI voices
+- Audio engineers seeking automated glitch detection
+- Researchers in generative AI audio
+
+Live performance and visual examples included:
+
+<img src="images/live_performance.png" width="300">
+<i>AI-generated: SD1.5 visual prompt of expressive AI opera singer performing live at a Christmas gala</i>
+
+🎵 **Download the AI-cover album:**  
+[🚨 Download the AI-Cover Album Here 🚨](https://drive.google.com/drive/folders/1-0rqw0uwNj_NsFwUVW3V5c0Ss5aeIsIx?usp=sharing)
+
+---
+
+## Data sources and AI methods
+
+**Data:**
+- Vocal training clips and converted vocals from the album "2024 Lopker Christmas Songs" (licensed under CC BY)
+- AI-generated cover songs used as test material
+- Annotated glitch segments for training/testing
+
+**AI Techniques:**
+- RVC (Retraining Voice Conversion)
+- Anomaly detection with supervised ML (Jupyter notebook provided)
+- Feature extraction from vocal tracks using audio signal processing (e.g., spectral flux, zero-crossing rate)
+
+**Try it yourself:**  
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mwtuni/glitches-in-christmas/blob/main/glitch_detector.ipynb)
+
+---
+
+## Challenges
+
+- Real-world AI vocals often contain subtle and unpredictable glitches
+- Annotation of glitch regions is time-consuming and subjective
+- RVC and generative audio models are still rapidly evolving and may change format or quality
+
+**Ethical Considerations:**
+- Clear labeling of AI-generated content
+- Avoiding misuse in deepfake impersonation
+
+---
+
+## What next?
+
+- Expand the glitch detection model with a larger dataset and more granular labels
+- Collaborate with other creators to benchmark and improve model generalizability
+- Add real-time audio preview and glitch heatmaps in a visual tool
+- Explore broader applications like speech synthesis quality control
+
+---
+
+## Acknowledgments
+
+* AI voice modeling: RVC project contributors (open-source)
+* Original album by [John Lopker – 2024 Lopker Christmas Songs](https://freemusicarchive.org/music/john-lopker/2024-lopker-christmas-songs) / [CC BY](https://creativecommons.org/licenses/by/4.0/)
+* Stable Diffusion (for visuals)
+* Elements of AI course by University of Helsinki & Reaktor
+
+---
+
+## Bonus: RVC Demonstration Samples
 
 1. **Original Vocal** ([Listen](data/rvc_example/1-original_vocal.wav))  
-   This is the raw vocal track before any processing.
-
 2. **Training Material** ([Listen](data/rvc_example/2-training_material.wav))  
-   A short clip used to train the custom AI voice model.
-
 3. **Generated Vocal** ([Listen](data/rvc_example/3_generated_vocal.wav))  
-   The AI-generated vocal output using the custom voice model.
 
-These examples demonstrate the transformation from the original vocal to the AI-generated output. They provide insight into the capabilities of the model and serve as a practical example of how RVC can be applied in audio production.
+---
 
-
-## Anomaly Detection in AI cover songs
-   - Fitting a voice model on a vocal track may cause glitches and anomalies, slowing down post-production.
-   - To address this, a **machine learning algorithm** was developed to locate and analyze these glitches effectively, as reflected in the accompanying Jupyter Notebook.
-   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mwtuni/glitches-in-christmas/blob/main/glitch_detector.ipynb)
-
-## License
-
-This project is licensed under the Apache License.
-
-## Original Album Info
-
-![Christmas Album](images/2024_Lopker_Christmas_Songs.PNG)[Free Music Archive](https://freemusicarchive.org/music/john-lopker/2024-lopker-christmas-songs)
-
-
+![Christmas Album](images/2024_Lopker_Christmas_Songs.PNG)
